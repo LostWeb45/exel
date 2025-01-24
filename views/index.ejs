@@ -1,30 +1,62 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Данные из Excel</title>
-    <link rel="stylesheet" href="/styles/style.css" />
+    <!DOCTYPE html>
+    <html lang="ru">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Данные из Excel</title>
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        />
+        <link rel="stylesheet" href="/styles/style.css" />
+      </head>
+      <body>
+        <h1>Данные из Excel файла</h1>
+
+        <div class="toolbar">
+          <div class="buttons">
+            <button><i class="fas fa-file"></i> Новый</button>
+            <button><i class="fas fa-save"></i> Сохранить</button>
+            <button><i class="fas fa-upload"></i> Загрузить</button>
+          </div>
+          <div>
+            <input type="text" placeholder="Поиск..." />
+          </div>
+          <div class="buttons">
+            <button><i class="fas fa-undo"></i> Отменить</button>
+            <button><i class="fas fa-redo"></i> Повторить</button>
+          </div>
+        </div>
+
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Имя</th>
+                <th>Возраст</th>
+                <th>Город</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% data.forEach(row => { %>
+              <tr>
+                <td><%= row.Имя %></td>
+                <td><%= row.Возраст %></td>
+                <td><%= row.Город %></td>
+              </tr>
+              <% }) %>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="status-bar">
+          <span>Строк: <%= data.length %></span>
+          <span>Файл: data.xlsx</span>
+        </div>
+      </body>
+    </html>
   </head>
-  <body>
-    <h1>Данные из Excel файла</h1>
-    <table>
-      <thead>
-        <tr>
-          <th>Имя</th>
-          <th>Boзpaст</th>
-          <th>Город</th>
-        </tr>
-      </thead>
-      <tbody>
-        <% data.forEach(row => { %>
-        <tr>
-          <td><%= row.Имя %></td>
-          <td><%= row.Возраст %></td>
-          <td><%= row.Город %></td>
-        </tr>
-        <% } ) %>
-      </tbody>
-    </table>
-  </body>
 </html>

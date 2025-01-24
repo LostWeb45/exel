@@ -1,0 +1,100 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #f4f4f9;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  padding: 10px 0;
+  margin: 0;
+  background-color: #1d6f42;
+  color: white;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #e0e0e0;
+  border-bottom: 1px solid #ccc;
+}
+
+.toolbar .buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.toolbar button {
+  padding: 5px 10px;
+  border: none;
+  background-color: #1d6f42;
+  color: white;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.toolbar button:hover {
+  background-color: #145a32;
+}
+
+.toolbar input[type="text"] {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 14px;
+}
+
+.table-container {
+  overflow-x: auto;
+  margin: auto;
+  max-width: 1200px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background: #fff;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-top: 0;
+  background-color: #ffffff;
+}
+
+thead th {
+  background-color: #1d6f42;
+  color: white;
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+tbody td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+.status-bar {
+  padding: 10px;
+  background-color: #e0e0e0;
+  border-top: 1px solid #ccc;
+  text-align: right;
+  font-size: 14px;
+}
+
+.status-bar span {
+  margin-right: 15px;
+}
