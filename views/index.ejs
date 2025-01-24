@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Данные из Excel</title>
+    <link rel="stylesheet" href="/styles/style.css" />
+  </head>
+  <body>
+    <h1>Данные из Excel файла</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Имя</th>
+          <th>Boзpaст</th>
+          <th>Город</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% data.forEach(row => { %>
+        <tr>
+          <td><%= row.Имя %></td>
+          <td><%= row.Возраст %></td>
+          <td><%= row.Город %></td>
+        </tr>
+        <% } ) %>
+      </tbody>
+    </table>
+  </body>
+</html>
